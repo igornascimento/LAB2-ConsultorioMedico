@@ -9,7 +9,7 @@ import util.Console;
 
 /**
  *
- * @author 180503743
+ * @author Igor Nascimento <igornascimento@gmail.com>
  */
 public class PacienteUI {
 

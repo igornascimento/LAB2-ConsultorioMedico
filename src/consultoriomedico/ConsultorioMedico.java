@@ -4,7 +4,7 @@ import view.MainUI;
 
 /**
  *
- * @author 180503743
+ * @author Igor Nascimento <igornascimento@gmail.com>
  */
 public class ConsultorioMedico {
 

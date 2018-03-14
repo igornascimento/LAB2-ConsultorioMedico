@@ -2,7 +2,7 @@ package repositorio;
 
 /**
  *
- * @author igor
+ * @author Igor Nascimento <igornascimento@gmail.com>
  */
 public class Medicamento {
 

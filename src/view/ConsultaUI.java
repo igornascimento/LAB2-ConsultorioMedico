@@ -4,7 +4,7 @@ import util.Console;
 
 /**
  *
- * @author igor
+ * @author Igor Nascimento <igornascimento@gmail.com>
  */
 public class ConsultaUI {
     
