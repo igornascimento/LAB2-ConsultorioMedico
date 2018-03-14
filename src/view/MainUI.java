@@ -12,7 +12,7 @@ public class MainUI {
         int opcao = 0;
         
         do {
-            System.out.println("#---- MENU ----#");
+            System.out.println("##### MENU #####");
             System.out.println("1- Pacientes;");
             System.out.println("2- Medicamentos;");
             System.out.println("0- Sair;");

@@ -19,7 +19,7 @@ public class MedicamentoUI {
         int opcao = 0;
         
         do {
-            System.out.println("#---- MEDICAMENTOS ----#");
+            System.out.println("##### MEDICAMENTOS #####");
             System.out.println("1- Cadastrar;");
             System.out.println("2- Listar;");
             System.out.println("3- Deletar;");
