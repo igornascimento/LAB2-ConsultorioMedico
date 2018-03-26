@@ -1,5 +1,8 @@
 package view;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
@@ -13,9 +16,10 @@ import util.Console;
  */
 public class PacienteUI {
 
-    Map<String, Paciente> pacientesMap = new HashMap<String, Paciente>();
+    private Map<String, Paciente> pacientesMap;
     
-    public void showMenu() {
+    public void showMenu(Map<String, Paciente> pacientesMap) {
+        this.pacientesMap = pacientesMap;
         int opcao = 0;        
         
         do {
@@ -50,12 +54,13 @@ public class PacienteUI {
     }
     
     public void cadastrarPaciente() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String doc = Console.scanString("RG:");
         Paciente paciente = new Paciente(
                 Console.scanString("Nome:"),
                 Console.scanString("Endereco:"),
                 doc,
-                Console.scanString("Data de nascimento:")
+                LocalDate.parse(Console.scanString("Data de nascimento:"), formatter)
         );
         pacientesMap.put(doc, paciente);
     }
@@ -70,16 +75,14 @@ public class PacienteUI {
                 String.format("%-20s", "|Endereco")
         );
         
-        while (it.hasNext()) {
-            pacientesMap.forEach((doc, paciente) -> {
-                System.out.println(
-                    String.format("%-20s", "|" + paciente.getDocumento()) + "\t" +
-                    String.format("%-20s", "|" + paciente.getNome()) + "\t" +
-                    String.format("%-20s", "|" + paciente.getDataNascimento()) + "\t" +
-                    String.format("%-20s", "|" + paciente.getEndereco())
-                );
-            });
-        }
+        pacientesMap.forEach((doc, paciente) -> {
+            System.out.println(
+                String.format("%-20s", "|" + paciente.getDocumento()) + "\t" +
+                String.format("%-20s", "|" + paciente.getNome()) + "\t" +
+                String.format("%-20s", "|" + paciente.getDataNascimento()) + "\t" +
+                String.format("%-20s", "|" + paciente.getEndereco())
+            );
+        });
     }
     
     public void deletarPaciente() {

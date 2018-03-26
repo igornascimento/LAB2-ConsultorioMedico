@@ -13,9 +13,10 @@ import util.Console;
 public class MedicamentoUI {
     
     int id = 0;
-    Map<Integer, Medicamento> medicamentosMap = new HashMap<Integer, Medicamento>();
+    Map<Integer, Medicamento> medicamentosMap;
     
-    public void showMenu() {
+    public void showMenu(Map<Integer, Medicamento> medicamentosMap) {
+        this.medicamentosMap = medicamentosMap;
         int opcao = 0;
         
         do {

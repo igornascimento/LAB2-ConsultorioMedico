@@ -1,5 +1,7 @@
 package repositorio;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Igor Nascimento <igornascimento@gmail.com>
@@ -9,12 +11,12 @@ public class Paciente {
     String nome;
     String endereco;
     String documento;
-    String dataNascimento;
+    LocalDate dataNascimento;
 
     public Paciente(String nome, 
                     String endereco, 
                     String documento, 
-                    String dataNascimento) {
+                    LocalDate dataNascimento) {
         this.nome = nome;
         this.endereco = endereco;
         this.documento = documento;
@@ -45,11 +47,11 @@ public class Paciente {
         this.documento = documento;
     }
 
-    public String getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
     
